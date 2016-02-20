@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define SIZE 30000
+
 int p, r;
-char data[30000], src_buffer[30000], b, *s = src_buffer;
+char data[SIZE], src_buffer[SIZE], b, *s = src_buffer;
 
 void interpret(char *c) {
   char *d;
@@ -51,7 +53,7 @@ void interpret(char *c) {
       break;
     }
 
-    if (p < 0 || p > 100)
+    if (p < 0 || p > SIZE)
       puts("Range error"), exit(0);
   }
   r--;
